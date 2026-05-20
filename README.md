@@ -4,4 +4,4 @@
 
 A procedural universe. Three galaxies, one door.
 
-Built with Cloudflare Pages.
+Built with Cloudflare Pages, Now Live at Oa.echoed.us
