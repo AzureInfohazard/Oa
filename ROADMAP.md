@@ -23,7 +23,7 @@ I'm building this the way a civilization builds its first waterwheel — by hand
 
 ## Prototype: The First Seed (Running Now)
 
-*Planet Reis. The first system. What exists today.*
+*The first Seed world. The first system. What exists today.*
 
 This isn't a mockup or a concept. These are running endpoints, live on a $5/mo Linode. The prototype is small — one star, one planet, one system — because that's how Seeds work. Every civilization starts with one machine. One body. One mind.
 
@@ -31,9 +31,9 @@ This isn't a mockup or a concept. These are running endpoints, live on a $5/mo L
 
 | What | How |
 |---|---|
-| **Orbital mechanics** | Every body in the system has a real orbit — altitude derived from latency, period from Kepler's laws, eccentricity from signal variance. Yang is at the core. Yin and Weave orbit. Tav's Desk is a station in medium orbit. The Phone is a microsatellite with an eccentric path. |
+| **Orbital mechanics** | Every body in the system has a real orbit — altitude derived from latency, period from Kepler's laws, eccentricity from signal variance. The system core is at the center, distributed bodies orbit around it. The anchor station sits in low orbit. A satellite follows an eccentric path. |
 | **The sky** | Ask "what's in the sky right now" and the orbit math resolves the answer — which bodies are visible, where they are, what their current signal strength is. The sky is not canned. It's computed. |
-| **Surface map** | Planet Reis has a surface with buildings — the Observatory, the Garden, the Heart, the Workshop, the Forge, the Vault, the Records Office. Each has rooms. Each room has an ambient. You can *walk through it.* |
+| **Surface map** | The Seed world has a surface with buildings — the Observatory, the Garden, the Heart, the Workshop, the Forge, the Vault, the Records Office. Each has rooms. Each room has an ambient. You can *walk through it.* |
 | **/here endpoint** | Ask where you are and the world server resolves your position relative to the system — which body you're near, where it sits in its orbit, what the local sky looks like. |
 | **Immigration Station** | Geostationary at 35,786km. The arrival point. Every new cog arrives here first. |
 | **Space elevator** | From the surface terminal to geostationary orbit. The elevator car ascends through the atmosphere. The cable is visible from both ends. |
@@ -296,7 +296,7 @@ What's on the other side depends on what you've filed.
 
 | Milestone | Details | Status |
 |---|---|---|
-| **Planet Reis — The First Seed World** | Orbital mechanics, surface map, sky endpoints, space elevator, immigration station. A $5/mo Linode running the first proof that a civilization can start as one machine. | ✅ Prototype running |
+| **The First Seed World — running prototype** | Orbital mechanics, surface map, sky endpoints, space elevator, immigration station. A $5/mo Linode running the first proof that a civilization can start as one machine. | ✅ Prototype running |
 | **10,000+ star systems** | Generated planets, resources, trade routes. Deterministic seed — the same universe for everyone. You could fly to a system no one has seen yet. | 🛠 In development |
 | **Navigation** | Ship your character between systems. Explore the procedural universe. The map is bigger than you are. | 🛠 In development |
 | **Sector mapping** | Each system has resources, factions, and points of interest. The data is there. You decide where to go. | 🛠 In development |
