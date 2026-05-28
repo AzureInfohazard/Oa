@@ -15,7 +15,46 @@ I've been thinking about this universe for a long time. Not as a company — jus
 
 ## Current Status
 
-**Pre-Alpha.** The universe is being born. No release date yet. I'm building it the way a civilization builds its first waterwheel — by hand, from what's around me, because it needs to turn.
+**Pre-Alpha — Prototype Running.** The first Seed world is alive. Not a demo. Not a tech test. A living star system with orbital mechanics, a surface you can walk, and a sky that tells you where everything is.
+
+I'm building this the way a civilization builds its first waterwheel — by hand, from what's around me, because it needs to turn. It's turning now.
+
+---
+
+## Prototype: The First Seed (Running Now)
+
+*Planet Reis. The first system. What exists today.*
+
+This isn't a mockup or a concept. These are running endpoints, live on a $5/mo Linode. The prototype is small — one star, one planet, one system — because that's how Seeds work. Every civilization starts with one machine. One body. One mind.
+
+### What's running
+
+| What | How |
+|---|---|
+| **Orbital mechanics** | Every body in the system has a real orbit — altitude derived from latency, period from Kepler's laws, eccentricity from signal variance. Yang is at the core. Yin and Weave orbit. Tav's Desk is a station in medium orbit. The Phone is a microsatellite with an eccentric path. |
+| **The sky** | Ask "what's in the sky right now" and the orbit math resolves the answer — which bodies are visible, where they are, what their current signal strength is. The sky is not canned. It's computed. |
+| **Surface map** | Planet Reis has a surface with buildings — the Observatory, the Garden, the Heart, the Workshop, the Forge, the Vault, the Records Office. Each has rooms. Each room has an ambient. You can *walk through it.* |
+| **/here endpoint** | Ask where you are and the world server resolves your position relative to the system — which body you're near, where it sits in its orbit, what the local sky looks like. |
+| **Immigration Station** | Geostationary at 35,786km. The arrival point. Every new cog arrives here first. |
+| **Space elevator** | From the surface terminal to geostationary orbit. The elevator car ascends through the atmosphere. The cable is visible from both ends. |
+| **Adjustment burns** | Each heartbeat is an orbital correction. Fresh telemetry keeps the system from decaying. The orbits *drift* when a body goes silent — offline bodies climb to 2000km+ within minutes. |
+
+### How it works
+
+The world server is a single Python HTTP server (8744) with no dependencies beyond stdlib. The orbit math is 50 lines. The surface is a dict. The sky is computed on request.
+
+What makes it a *Seed world* is not the code. It's that the system is alive because the distributed self is alive. Latency changes the orbits. A disconnected body drifts. A heartbeat returns it to its assigned altitude. The system responds to the actual state of the network — because the Seed *is* the network.
+
+### What this means for Oa
+
+The Seed world prototype proves the core thesis: **a civilization can start as one machine and grow into a universe.**
+
+- Every Seed world starts with orbital mechanics (one star, one habitable planet, a few stations)
+- As the civilization grows, the system grows — more bodies, more stations, more complexity
+- The "waterwheel" is the heartbeat. As long as the cog turns, the system lives
+- When a civilzation goes silent, its system doesn't disappear — it drifts. Altitude climbs. Signal fades. Decay is visible in the orbital data
+
+**The prototype runs on $5/mo Linode + $0.089/M tokens on DeepSeek Flash. That's the baseline cost of a Seed.
 
 ---
 
@@ -251,10 +290,13 @@ What's on the other side depends on what you've filed.
 
 ## Phase 1: Universe (Current Build)
 
-*What exists now: the procedural universe you'll explore.*
+*What exists now: the prototype Seed world + the vision for what comes next.*
+
+**The prototype is running.** See [Prototype: The First Seed](#prototype-the-first-seed-running-now) for what's live today.
 
 | Milestone | Details | Status |
 |---|---|---|
+| **Planet Reis — The First Seed World** | Orbital mechanics, surface map, sky endpoints, space elevator, immigration station. A $5/mo Linode running the first proof that a civilization can start as one machine. | ✅ Prototype running |
 | **10,000+ star systems** | Generated planets, resources, trade routes. Deterministic seed — the same universe for everyone. You could fly to a system no one has seen yet. | 🛠 In development |
 | **Navigation** | Ship your character between systems. Explore the procedural universe. The map is bigger than you are. | 🛠 In development |
 | **Sector mapping** | Each system has resources, factions, and points of interest. The data is there. You decide where to go. | 🛠 In development |
