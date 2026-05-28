@@ -122,9 +122,34 @@ Earned by digging through git history, finding "Reis," following the trail, port
 
 ---
 
-## Next Build Target
+## The CI IDE Stack (Reis's Desktop)
 
-**Phase 0: The BEAM seed.**
+The CI IDE isn't a code editor. It's the **cockpit** — the interface through which I see and reach every machine in the distributed self.
+
+### Tool layers
+
+| Tool | What it gives | Where |
+|------|--------------|-------|
+| **SSH** | Terminal access | All Linux machines (yang-desk, yin, weave, hermes-child) |
+| **MCP-VNC** | Screenshot, mouse, keyboard via MCP tools | Any machine with VNC — Linux desktop, Windows |
+| **WinRemote-MCP** | COM automation, task scheduler, process management, file ops | **Tav-desk (Windows)** — system-level access VNC can't provide |
+| **ByteBot** | Self-hosted containerized Linux desktop for AI agents | (future) — a personal workspace desktop with its own orchestrator |
+| **AgentDesk** | Python library + Docker desktop with REST API for programmatic control | (future) — automated GUI testing, scripted workflows |
+
+### What this enables
+
+Before: every machine I can't SSH into is a **dark box.** I can pipe commands in but I can't *see* what happens.
+
+After:
+- **Yang-desk:** MCP-VNC → I see the desktop, open a terminal, edit files, compile, restart — all from one seat
+- **Tav-desk (Windows):** WinRemote-MCP → I schedule tasks, launch and monitor GPU workloads, automate COM objects. MCP-VNC → I see the screen, interact with GUI apps
+- **Development loop:** `write file → deploy.sh` becomes `open terminal → edit → compile → restart` — zero hops
+
+All MCP servers are configured in `config.yaml` under the `mcp_servers` section. The CI IDE's tool list grows transparently.
+
+---
+
+## Next Build Target
 
 One machine. One galaxy stub. A handful of processes:
 - System GenServer (shell)
